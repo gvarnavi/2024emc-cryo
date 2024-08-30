@@ -5,8 +5,8 @@ style: css/custom.css
 ---
 
 ```js
-const img_VLP = FileAttachment("data/joint-ptycho-tomo-VLP.svg").href;
-const img_Apo = FileAttachment("data/joint-ptycho-tomo-Apo.svg").href;
+const img_VLP = FileAttachment("data/vlp_joint-ptycho_recons.svg").href;
+const img_Apo = FileAttachment("data/apoF_joint-ptycho_recons.svg").href;
 const img_com = FileAttachment("data/overlap-tomo-comparison.svg").href;
 
 import { return_resized_img } from "./components/ImageUtilities.js";
@@ -35,10 +35,10 @@ import { return_resized_img } from "./components/ImageUtilities.js";
 <div class="grid grid-cols-2" style="grid-auto-rows: auto;">
   <div class="img-container" style="min-height:300px;">
     Virus-like particles
-    ${resize((width,height)=> return_resized_img(img_VLP,height-16,height-16))}
+    ${resize((width,height)=> return_resized_img(img_VLP,width,"auto;"))}
   </div>
   <div class="img-container" style="min-height:300px;">
     Apoferritin
-    ${resize((width,height)=> return_resized_img(img_Apo,height-16,height-16))}
+    ${resize((width,height)=> return_resized_img(img_Apo,width, "auto;"))}
   </div>
 </div>
